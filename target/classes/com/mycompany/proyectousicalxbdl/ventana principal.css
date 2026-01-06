@@ -1,0 +1,136 @@
+.root {
+    -fx-background-color: #000000; /* Fondo completamente negro */
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Título de la canción */
+.titulo-label {
+    -fx-font-size: 22px;
+    -fx-text-fill: #00fff7;
+    -fx-padding: 15 0 15 0;
+    -fx-font-weight: bold;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-pref-width: 300;
+    -fx-background-color: #111111;
+    -fx-border-color: #00fff7;
+    -fx-border-radius: 5;
+    -fx-border-width: 1.5;
+    -fx-text-fill: #00fff7;
+}
+
+/* Letra de la canción */
+.letra-label {
+    -fx-text-fill: #00fff7;
+    -fx-font-size: 14px;
+}
+
+/* Texto de tiempo */
+.tiempo-label {
+    -fx-text-fill: #00fff7;
+    -fx-font-size: 12px;
+}
+
+/* Labels de Volumen/Velocidad */
+.config-label {
+    -fx-text-fill: #00fff7;
+    -fx-font-size: 13px;
+}
+
+/* Botones de control */
+.button {
+    -fx-background-color: transparent;
+    -fx-border-color: #00fff7;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 5;
+    -fx-text-fill: #00fff7;
+    -fx-font-size: 14px;
+    -fx-padding: 5 10;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #00fff722; /* Cian transparente al pasar mouse */
+}
+
+
+.slider .track {
+    -fx-background-color: #333;
+    -fx-pref-height: 3px; 
+}
+
+.slider .thumb {
+    -fx-background-color: #00fff7;
+    -fx-effect: dropshadow(three-pass-box, #00fff7, 5, 0.5, 0, 0);
+}
+
+
+.combo-box {
+    -fx-pref-width: 300;
+    -fx-background-color: #111111;
+    -fx-border-color: #00fff7;
+    -fx-border-radius: 5;
+    -fx-border-width: 1.5;
+    -fx-text-fill: #00fff7;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #00fff7; 
+    -fx-background-color: transparent;
+}
+
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #00fff7;
+    -fx-border-width: 1.5;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #00fff7;
+}
+
+/* Menú desplegable */
+.combo-box-popup .list-view {
+    -fx-background-color: #000000;
+}
+
+.combo-box-popup .list-cell {
+    -fx-text-fill: #00fff7;
+    -fx-background-color: #000000;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #00fff744; 
+}
+
+
+.slider .axis {
+    -fx-tick-label-fill: #00fff7; 
+    -fx-minor-tick-visible: true;
+}
+
+/* Estilo para el TextArea que muestra la letra */
+.text-area.letra-label {
+    -fx-control-inner-background: #000000; /* Fondo negro */
+    -fx-text-fill: #00fff7;                /* Texto cian */
+    -fx-font-size: 14px;
+    -fx-border-color: #00fff7;             /* Borde cian */
+    -fx-border-radius: 5;
+    -fx-border-width: 1.5;
+    -fx-focus-color: #00fff7;
+    -fx-faint-focus-color: transparent;
+}
+
+/* ScrollBar para el TextArea */
+.text-area.letra-label .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.text-area.letra-label .scroll-bar .thumb {
+    -fx-background-color: #00fff7;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+}

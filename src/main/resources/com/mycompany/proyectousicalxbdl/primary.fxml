@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+
+<BorderPane prefHeight="699.0" prefWidth="950.0"
+            stylesheets="@ventana_principal.css"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mycompany.proyectousicalxbdl.PrimaryController">
+
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <Label fx:id="labelCancion" style="-fx-font-size: 28px;" styleClass="titulo-label" text="Canción actual" BorderPane.alignment="CENTER" />
+           
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="30">
+            <padding>
+                <Insets bottom="30" left="50" right="50" top="30" />
+            </padding>
+
+            <ComboBox fx:id="comboBoxCanciones" promptText="Selecciona una canción" style="-fx-font-size: 18px;" styleClass="combo-box" />
+
+            <HBox spacing="30" alignment="CENTER">
+                <TextArea fx:id="labelLetra"
+                          editable="false"
+                          wrapText="true"
+                          prefWidth="420"
+                          prefHeight="250"
+                          styleClass="letra-label"
+                          style="-fx-font-size: 18px;" />
+
+                <MediaView fx:id="mediaView" fitWidth="400" fitHeight="250" />
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="20">
+                <Button fx:id="anteriorButton" onAction="#anteriorCancion" style="-fx-font-size: 24px;" text="⏮" />
+                <Button fx:id="playButton" onAction="#playCancion" style="-fx-font-size: 24px;" text="▶" />
+                <Button fx:id="pauseButton" onAction="#pauseCancion" style="-fx-font-size: 24px;" text="⏸" />
+                <Button fx:id="siguienteButton" onAction="#siguienteCancion" style="-fx-font-size: 24px;" text="⏭" />
+                <Button fx:id="repetirButton" onAction="#toggleRepetir" style="-fx-font-size: 18px;" text="🔁 Repetir OFF" />
+               <Button onAction="#cargarContenido" style="-fx-font-size: 16px;" text="📥 Cargar Contenido" />
+
+            </HBox>
+
+            <VBox alignment="CENTER" spacing="10">
+                <HBox prefWidth="800">
+                    <Label fx:id="tiempoActualLabel" style="-fx-font-size: 16px;" styleClass="tiempo-label" text="00:00" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Label fx:id="tiempoTotalLabel" style="-fx-font-size: 16px;" styleClass="tiempo-label" text="03:45" />
+                </HBox>
+                <Slider fx:id="tiempoSlider" prefWidth="800" style="-fx-font-size: 14px;" />
+            </VBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="50">
+            <padding>
+                <Insets bottom="30" left="30" right="30" top="30" />
+            </padding>
+
+            <HBox alignment="CENTER" spacing="15">
+                <Label style="-fx-font-size: 16px;" styleClass="config-label" text="🔊 Volumen" />
+                <Slider fx:id="volumenSlider" majorTickUnit="50" max="100" min="0" minorTickCount="5" prefWidth="200"
+                        showTickLabels="true" showTickMarks="true" snapToTicks="true" value="50" />
+                <Label fx:id="volumenValorLabel" style="-fx-font-size: 16px;" styleClass="config-label" text="50%" />
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="15">
+                <Label style="-fx-font-size: 16px;" styleClass="config-label" text="⚡ Velocidad" />
+                <Slider fx:id="velocidadSlider" majorTickUnit="50" max="150" min="50" minorTickCount="5" prefWidth="200"
+                        showTickLabels="true" showTickMarks="true" snapToTicks="true" value="100" />
+                <Label fx:id="velocidadValorLabel" style="-fx-font-size: 16px;" styleClass="config-label" text="100%" />
+            </HBox>
+        </HBox>
+    </bottom>
+</BorderPane>
